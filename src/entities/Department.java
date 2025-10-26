@@ -1,14 +1,18 @@
 package entities;
 
+//Importanto o Serializable
 import java.io.Serializable;
 
+//Classe Departmente,   implementando o Serializable na minha classe
 public class Department implements Serializable{
     
     private static final long serialVersionUID = 1L;
 
+    //Atributos
     private Integer id;
     private String name;
 
+    //Construtores
     public Department(){}
 
     public Department(Integer id, String name) {
@@ -16,6 +20,7 @@ public class Department implements Serializable{
         this.name = name;
     }
 
+    //Getters e Setters
     public Integer getId() {
         return id;
     }
@@ -32,6 +37,7 @@ public class Department implements Serializable{
         this.name = name;
     }
 
+    //HashCode e Equals
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -63,6 +69,7 @@ public class Department implements Serializable{
         return true;
     }
 
+    //ToString
     @Override
     public String toString() {
         return "Department [id=" + id + ", name=" + name + "]";
